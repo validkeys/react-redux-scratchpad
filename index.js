@@ -49,10 +49,9 @@ const reducers = combineReducers({
   scratch: scratchReducer
 });
 
-const loggerMiddleware          = createLogger();
-// const createStoreWithMiddleware = applyMiddleware(thunk, loggerMiddleware)(createStore);
-
+const loggerMiddleware = createLogger();
 const enhancer = compose(
+  // loggerMiddleware should always be last
   applyMiddleware(thunk, loggerMiddleware),
   DevTools.instrument()
 );
