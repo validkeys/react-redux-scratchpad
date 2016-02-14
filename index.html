@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React Starter</title>
+    <!-- include react -->
+    <!--script src="./node_modules/react/dist/react-with-addons.js"></script -->
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div id="myapp">
+        <!-- this is where the root react component will get rendered -->
+    </div>
+    <!-- include the webpack-dev-server script so our scripts get reloaded when we make a change -->
+    <!-- we'll run the webpack dev server on port 3001, so make sure it is correct -->
+    <script src="/webpack-dev-server.js"></script>
+    <!-- include the bundle that contains all our scripts, produced by webpack -->
+    <!-- the bundle is served by the webpack-dev-server, so serve it also from localhost:3001 -->
+    <script type="text/javascript" src="/assets/bundle.js"></script>
+</body>
+</html>
